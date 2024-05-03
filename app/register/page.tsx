@@ -1,6 +1,7 @@
 'use client';
 
 import { IUser } from "@/interfaces/user.interface";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Register() {
@@ -20,8 +21,8 @@ export default function Register() {
 
     return (
         <main className="h-screen flex flex-row p-16 items-center justify-center w-full">
-            <div className="flex flex-col w-full h-full">
-
+            <div className="flex flex-col w-full h-full items-center justify-center">
+                <Image src="/illu/register.svg" alt="Register" width={550} height={550} />
             </div>
             <form onSubmit={onSubmit} className="flex flex-col  gap-4 w-full h-full items-start justify-center pr-32">
                 <div className="flex flex-row gap-4 items-center w-full">

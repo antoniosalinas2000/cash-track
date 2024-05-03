@@ -14,8 +14,14 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        'lexend': ['var(--font-lexend)'],
+        'poppins': ['var(--font-poppins)'],
       },
+      colors : {
+        "cash-green" : "#92E3A9",
+        "cash-blue" : "#3B82F6",
+        "cash-black" : "#1A1A1A",
+        "cash-gray" : "#F9F9F9"
+      }
     },
   },
   plugins: [],

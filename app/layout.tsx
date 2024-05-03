@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Lexend } from "next/font/google";
+import { Lexend, Poppins } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "@/contexts/auth.context";
 
-const lexend = Lexend({
+const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-lexend',
+  variable: '--font-poppins',
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
 })
 
@@ -20,8 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={` ${lexend.variable} font-lexend`} >{children}</body>
-    </html>
+    <AuthProvider>
+      <html lang="en">
+        <body className={` ${poppins.variable} font-poppins`} >{children}</body>
+      </html>
+    </AuthProvider>
   );
 }
