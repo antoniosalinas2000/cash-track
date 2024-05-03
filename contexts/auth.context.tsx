@@ -51,7 +51,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
             const response = await loginUser(user);
             setIsValid(true);
             setUser(response.data);
-            localStorage.setItem('token', response.data.token as string);
+            localStorage.setItem('token', response.token as string);
             localStorage.setItem('user', JSON.stringify(response.data));
             router.push('/application');
         } catch (error: any) {

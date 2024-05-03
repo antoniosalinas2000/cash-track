@@ -18,7 +18,7 @@ export const getDashboardData = async () => {
 
 type TransactionType = 'income' | 'expense'; 
 
-export const postTransaction = async (transaction: IExpense | IIncome, type : TransactionType) => {
+export const addTransaction = async (transaction: IExpense | IIncome, type : TransactionType) => {
     try {
         const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/transaction/${type}`, {
             method: 'POST',

@@ -1,19 +1,19 @@
 export interface IExpense {
     expense_id?: string;
     name: string;
-    date: Date;
-    amount: number;
+    date: string;
+    amount: string;
     expense_category_id: number;
-    user_id: string;
+    user_id?: string;
 }
 
 export interface IIncome {
     income_id?: string;
     name: string;
-    date: Date;
-    amount: number;
+    date: string;
+    amount: string;
     income_category_id: number;
-    user_id: string;
+    user_id?: string;
 }
 
 export interface ICategory {
