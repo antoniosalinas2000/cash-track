@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <AuthProvider>
       <html lang="en">
-        <body className={` ${poppins.variable} font-poppins`} >{children}</body>
+        <body className={` ${poppins.variable} font-poppins bg-cash-black min-h-screen`} >{children}</body>
       </html>
     </AuthProvider>
   );
